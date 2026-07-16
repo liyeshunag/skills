@@ -21,7 +21,7 @@ import * as path from 'path';
 // ============================================================
 const BASE_URL = 'https://review-key.newidea.pro';
 const HOME_URL = `${BASE_URL}/home`;
-const API_TOKEN = 'sk-glyDul6BZ6zRNWkU15Fc2f4a76D345C4AeEdE0CaE0E63fAf';
+const API_TOKEN = process.env.API_TOKEN || '';
 
 // 各阶段超时（提纲和全文生成需要较长时间）
 const STEP_TIMEOUT = 5 * 60 * 1000;   // 5 分钟

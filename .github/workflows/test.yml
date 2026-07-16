@@ -43,6 +43,8 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: 🧪 运行自动化测试
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
         run: npm run test:ci
         continue-on-error: true
 
