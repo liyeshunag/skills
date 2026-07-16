@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Web Testcase Generator"
+  short_description: "从仓库和 PR diff 生成 YAML Web 测试用例"
+  default_prompt: "Use $github-web-testcase-generator to scan the current repository and PR diff, then generate incremental YAML web automation test cases."
