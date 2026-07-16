@@ -1,0 +1,95 @@
+name: 综述写作工作台 - 自动化测试
+
+# ============================================================
+# 触发条件：
+#   1. 定时执行：每天北京时间 8:00 和 20:00
+#   2. 手动触发 (workflow_dispatch)
+#   3. Push 到 main/master 时触发
+# ============================================================
+on:
+  schedule:
+    # 北京时间 8:00 = UTC 0:00
+    - cron: '0 0 * * *'
+    # 北京时间 20:00 = UTC 12:00
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+jobs:
+  test:
+    name: Playwright 自动化测试
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+
+      - name: 🔧 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 安装依赖
+        run: npm ci
+
+      - name: 🌐 安装 Playwright 浏览器
+        run: npx playwright install --with-deps chromium
+
+      - name: 🧪 运行自动化测试
+        run: npm run test:ci
+        continue-on-error: true
+
+      - name: 📊 生成 Markdown 测试报告
+        run: node scripts/generate-report.js
+        if: always()
+
+      - name: 📤 上传 HTML 报告
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-html-report
+          path: playwright-report/
+          retention-days: 30
+
+      - name: 📤 上传测试数据（JSON/XML/Markdown）
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-data
+          path: |
+            test-results.json
+            test-results.xml
+            TEST_REPORT.md
+          retention-days: 30
+
+      - name: 📤 上传失败截图和视频
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: failure-screenshots-videos
+          path: test-results/
+          retention-days: 30
+
+      - name: 📤 上传下载的文件
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: downloaded-files
+          path: downloads/
+          retention-days: 7
+
+      - name: 📋 输出执行摘要
+        if: always()
+        run: |
+          echo "============================================"
+          echo "  测试执行完成"
+          echo "  Run ID: ${{ github.run_id }}"
+          echo "  查看: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "============================================"

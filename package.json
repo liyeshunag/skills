@@ -1,0 +1,23 @@
+{
+  "name": "review-workbench-tests",
+  "version": "1.0.0",
+  "description": "综述写作工作台 Playwright 自动化测试",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "test:ci": "CI=true FORCE_HEADLESS=true npx playwright test",
+    "test:ci:report": "CI=true FORCE_HEADLESS=true npx playwright test && node scripts/generate-report.js",
+    "report:generate": "node scripts/generate-report.js",
+    "report:open": "npx playwright show-report",
+    "report:full": "npx playwright test && node scripts/generate-report.js && npx playwright show-report",
+    "install:browsers": "npx playwright install --with-deps chromium"
+  },
+  "keywords": ["playwright", "automation", "testing"],
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  }
+}
