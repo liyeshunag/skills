@@ -14,7 +14,7 @@ on:
     - cron: '0 12 * * *'
   workflow_dispatch:
   push:
-    branches: [main, master]
+    branches: [main, master, review]
 
 jobs:
   test:
