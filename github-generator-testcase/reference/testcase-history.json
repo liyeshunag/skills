@@ -1,11 +1,130 @@
 {
-  "version": "1.0.0",
-  "current_index": 0,
-  "project_name": "",
-  "last_scan": "",
-  "generated_modules": [],
-  "scanned_commits": [],
-  "scanned_prs": [],
-  "scanned_branches": [],
-  "file_hashes": {}
+  "current_index": 200,
+  "project": "AionUi",
+  "repository": "git@github.com:helixlife-ai/AionUi.git",
+  "branch": "master",
+  "last_scan": "2026-07-19",
+  "version": "2.1.28",
+  "generated_modules": [
+    {
+      "module": "应用启动",
+      "testcase_count": 6,
+      "range": "testcase_001 ~ testcase_006"
+    },
+    {
+      "module": "AI代理配置",
+      "testcase_count": 17,
+      "range": "testcase_007 ~ testcase_023"
+    },
+    {
+      "module": "会话对话",
+      "testcase_count": 32,
+      "range": "testcase_024 ~ testcase_055"
+    },
+    {
+      "module": "多Agent模式",
+      "testcase_count": 13,
+      "range": "testcase_056 ~ testcase_068"
+    },
+    {
+      "module": "团队模式",
+      "testcase_count": 8,
+      "range": "testcase_069 ~ testcase_076"
+    },
+    {
+      "module": "定时任务",
+      "testcase_count": 17,
+      "range": "testcase_077 ~ testcase_093"
+    },
+    {
+      "module": "Office文档生成",
+      "testcase_count": 9,
+      "range": "testcase_094 ~ testcase_102"
+    },
+    {
+      "module": "预览面板",
+      "testcase_count": 9,
+      "range": "testcase_103 ~ testcase_111"
+    },
+    {
+      "module": "国际化(i18n)",
+      "testcase_count": 7,
+      "range": "testcase_112 ~ testcase_118"
+    },
+    {
+      "module": "设置页面",
+      "testcase_count": 16,
+      "range": "testcase_119 ~ testcase_134"
+    },
+    {
+      "module": "远程访问",
+      "testcase_count": 6,
+      "range": "testcase_135 ~ testcase_140"
+    },
+    {
+      "module": "应用更新",
+      "testcase_count": 5,
+      "range": "testcase_141 ~ testcase_145"
+    },
+    {
+      "module": "桌面宠物",
+      "testcase_count": 2,
+      "range": "testcase_146 ~ testcase_147"
+    },
+    {
+      "module": "性能测试",
+      "testcase_count": 5,
+      "range": "testcase_148 ~ testcase_152"
+    },
+    {
+      "module": "安全测试",
+      "testcase_count": 8,
+      "range": "testcase_153 ~ testcase_160"
+    },
+    {
+      "module": "兼容性测试",
+      "testcase_count": 10,
+      "range": "testcase_161 ~ testcase_170"
+    },
+    {
+      "module": "错误处理",
+      "testcase_count": 4,
+      "range": "testcase_171 ~ testcase_174"
+    },
+    {
+      "module": "日志与调试",
+      "testcase_count": 3,
+      "range": "testcase_175 ~ testcase_177"
+    },
+    {
+      "module": "Docker部署",
+      "testcase_count": 2,
+      "range": "testcase_178 ~ testcase_179"
+    },
+    {
+      "module": "代码质量",
+      "testcase_count": 3,
+      "range": "testcase_180 ~ testcase_182"
+    },
+    {
+      "module": "端到端/集成测试",
+      "testcase_count": 2,
+      "range": "testcase_183 ~ testcase_184"
+    },
+    {
+      "module": "菜单与导航",
+      "testcase_count": 2,
+      "range": "testcase_185 ~ testcase_186"
+    },
+    {
+      "module": "回归测试",
+      "testcase_count": 4,
+      "range": "testcase_187 ~ testcase_190"
+    },
+    {
+      "module": "综合测试",
+      "testcase_count": 1,
+      "range": "testcase_200"
+    }
+  ]
 }

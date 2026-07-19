@@ -39,26 +39,26 @@ class TestCaseGenerator:
         {"name": "空值测试", "priority": "P1", "description": "必填字段为空值测试"},
         {"name": "Null值测试", "priority": "P1", "description": "字段值为null的测试"},
         {"name": "边界值测试", "priority": "P1", "description": "临界值（0, 1, max, max+1）测试"},
-        {"name": "最大长度测试", "priority": "P2", "description": "输入超过最大长度测试"},
-        {"name": "最小长度测试", "priority": "P2", "description": "输入不足最小长度测试"},
+        {"name": "最大长度测试", "priority": "P3", "description": "输入超过最大长度测试"},
+        {"name": "最小长度测试", "priority": "P3", "description": "输入不足最小长度测试"},
         {"name": "特殊字符测试", "priority": "P1", "description": "<>'\"&/| 等特殊字符测试"},
         {"name": "SQL注入测试", "priority": "P0", "description": "' OR '1'='1 等注入测试"},
         {"name": "XSS测试", "priority": "P0", "description": "<script>alert(1)</script> 测试"},
         {"name": "权限测试", "priority": "P0", "description": "无权限/越权操作测试"},
-        {"name": "重复提交测试", "priority": "P1", "description": "快速双击/多次点击测试"},
-        {"name": "并发测试", "priority": "P1", "description": "多人同时操作测试"},
-        {"name": "网络异常测试", "priority": "P1", "description": "断网/弱网环境测试"},
-        {"name": "超时测试", "priority": "P1", "description": "接口超时处理测试"},
-        {"name": "浏览器兼容测试", "priority": "P2", "description": "Chrome/Firefox/Safari/Edge 测试"},
-        {"name": "分辨率测试", "priority": "P2", "description": "1920x1080 / 1366x768 / 375x667 测试"},
-        {"name": "国际化测试", "priority": "P2", "description": "中英文切换测试"},
-        {"name": "文件格式测试", "priority": "P1", "description": "支持/不支持的文件格式测试"},
-        {"name": "文件大小测试", "priority": "P1", "description": "超大文件/空文件测试"},
-        {"name": "AI异常返回测试", "priority": "P1", "description": "AI返回格式错误/内容异常测试"},
-        {"name": "服务重启测试", "priority": "P1", "description": "操作过程中服务重启测试"},
+        {"name": "重复提交测试", "priority": "P2", "description": "快速双击/多次点击测试"},
+        {"name": "并发测试", "priority": "P2", "description": "多人同时操作测试"},
+        {"name": "网络异常测试", "priority": "P2", "description": "断网/弱网环境测试"},
+        {"name": "超时测试", "priority": "P2", "description": "接口超时处理测试"},
+        {"name": "浏览器兼容测试", "priority": "P3", "description": "Chrome/Firefox/Safari/Edge 测试"},
+        {"name": "分辨率测试", "priority": "P3", "description": "1920x1080 / 1366x768 / 375x667 测试"},
+        {"name": "国际化测试", "priority": "P4", "description": "中英文切换测试"},
+        {"name": "文件格式测试", "priority": "P2", "description": "支持/不支持的文件格式测试"},
+        {"name": "文件大小测试", "priority": "P2", "description": "超大文件/空文件测试"},
+        {"name": "AI异常返回测试", "priority": "P2", "description": "AI返回格式错误/内容异常测试"},
+        {"name": "服务重启测试", "priority": "P3", "description": "操作过程中服务重启测试"},
         {"name": "Token失效测试", "priority": "P1", "description": "Token过期后的行为测试"},
         {"name": "Session过期测试", "priority": "P1", "description": "Session超时后的行为测试"},
-        {"name": "回归测试", "priority": "P1", "description": "修改后关联功能正常性测试"},
+        {"name": "回归测试", "priority": "P4", "description": "修改后关联功能正常性测试"},
     ]
 
     def __init__(self, prompt_template_dir: str = None):
@@ -479,7 +479,7 @@ class TestCaseGenerator:
 
         # 校验优先级
         priority = testcase.get("优先级", "")
-        if priority not in ["P0", "P1", "P2", "P3"]:
+        if priority not in ["P0", "P1", "P2", "P3", "P4"]:
             errors.append(f"优先级不合法: {priority}")
 
         return errors
