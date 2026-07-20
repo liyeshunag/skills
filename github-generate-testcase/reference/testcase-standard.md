@@ -2,7 +2,7 @@
 
 ## 一、总则
 
-本规范定义了 `github-generator-testcase` Skill 生成测试用例的编写标准。所有自动生成的测试用例必须严格遵循本规范。
+本规范定义了 `github-generate-testcase` Skill 生成测试用例的编写标准。所有自动生成的测试用例必须严格遵循本规范。
 
 ## 二、CSV 格式规范
 

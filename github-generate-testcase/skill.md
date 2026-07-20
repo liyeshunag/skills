@@ -1,8 +1,8 @@
-# github-generator-testcase
+# github-generate-testcase
 
 ## Skill 介绍
 
-`github-generator-testcase` 是一个企业级、可长期维护的 Agent Skill，用于自动扫描 GitHub 仓库源码、Pull Request (PR)、Commit Diff，分析新增/修改功能，并生成高质量的中文测试用例。
+`github-generate-testcase` 是一个企业级、可长期维护的 Agent Skill，用于自动扫描 GitHub 仓库源码、Pull Request (PR)、Commit Diff，分析新增/修改功能，并生成高质量的中文测试用例。
 
 ### 核心特性
 
@@ -55,7 +55,7 @@
 ## 目录结构说明
 
 ```
-github-generator-testcase/
+github-generate-testcase/
 ├── skill.md                          # 本文件：Skill 定义与说明
 ├── README.md                         # 用户使用文档
 ├── reference/

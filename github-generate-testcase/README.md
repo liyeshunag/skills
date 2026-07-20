@@ -1,4 +1,4 @@
-# github-generator-testcase
+# github-generate-testcase
 
 > 企业级 GitHub 仓库测试用例自动生成 Skill
 
@@ -427,7 +427,7 @@ patch: Bug修复或Prompt优化
 ## 目录结构
 
 ```
-github-generator-testcase/
+github-generate-testcase/
 ├── skill.md                    # Skill 定义文件
 ├── README.md                   # 本文件
 ├── reference/

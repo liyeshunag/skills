@@ -1,6 +1,6 @@
 # Prompt 模板库
 
-本文档定义了 `github-generator-testcase` Skill 使用的所有 Prompt 模板。
+本文档定义了 `github-generate-testcase` Skill 使用的所有 Prompt 模板。
 每个模板包含系统角色设定、输入变量、输出格式约束。
 
 ---
