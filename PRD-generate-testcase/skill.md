@@ -1,4 +1,4 @@
-# PRD-generator-testcase
+# PRD-generate-testcase
 
 ## 技能概述
 

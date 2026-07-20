@@ -2,7 +2,7 @@
 
 ## Skills 介绍
 
-**PRD-generator-testcase** 是一个面向测试工程师的 Agent Skill，能够根据产品需求文档（PRD）自动分析并生成标准化的测试用例。
+**PRD-generate-testcase** 是一个面向测试工程师的 Agent Skill，能够根据产品需求文档（PRD）自动分析并生成标准化的测试用例。
 
 ### 核心能力
 
@@ -145,7 +145,7 @@ PRD 应尽量包含以下信息，以获得更完整准确的测试用例：
 ## 目录结构
 
 ```
-PRD-generator-testcase/
+PRD-generate-testcase/
 ├── skill.md                        # Skills 核心定义文件
 ├── reference/                      # 参考资料目录
 │   ├── testcase-template.md        # 测试用例规范模板
